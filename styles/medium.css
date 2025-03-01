@@ -1,0 +1,121 @@
+:root {
+    --color-black: #000000;
+    --color-gold: #dfa62b;
+    --color-gray: #a09cb0;
+    --color-light-blue: #a3b9c9;
+    --color-light-cyan: #abdae1;
+}
+
+@media screen and (min-width: 621px) {
+
+    section:not(.hero-main) {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+
+    .key-feature-item p {
+        grid-row: 2 / 3;
+        margin-left: 1.25rem;
+    }
+
+
+
+    .main-why-choose h2,
+    .main-our-services h2,
+    .main-trusted-experts h2 {
+        grid-row: 2 / 3;
+
+    }
+
+    .main-img {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(83% 0, 100% 50%, 84% 100%, 0% 100%, 0 52%, 0% 0%);
+    }
+
+    .main-img img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    #key-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .key-feature-item p {
+        transform: scale(.9);
+    }
+
+
+    /* contact.html */
+
+
+    .welcome-join p {
+        margin: 0 auto;
+        width: 85%;
+        line-height: 1.4;
+    }
+
+    .form {
+        justify-self: center;
+    }
+
+
+
+    /* services page */
+
+
+    .main-servicespage {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .services-container-grid {
+        display: grid;
+        justify-items: start;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.5rem;
+        align-items: center;
+    }
+
+    .services-container-grid h2 {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        justify-self: center;
+    }
+
+
+
+
+    .services-container-grid:nth-child(even) {
+        direction: rtl;
+        border-top: 2px solid var(--color-light-blue);
+        border-bottom: 2px solid var(--color-light-blue);
+    }
+
+    /* .services-container-grid:nth-child(even)>* {
+        direction: ltr;
+    } */
+
+
+    .services-container-grid:nth-child(even) img {
+        clip-path: polygon(100% 0%, 100% 55%, 100% 100%, 19% 100%, 0% 50%, 19% 1%);
+
+    }
+
+    .services-container-grid:nth-child(odd) img {
+        clip-path: polygon(83% 0, 100% 50%, 84% 100%, 0% 100%, 0 52%, 0% 0%);
+    }
+
+
+
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
