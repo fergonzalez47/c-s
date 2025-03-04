@@ -1072,38 +1072,7 @@ dialog.closing {
 }
 
 
-/* dialog */
 
-
-
-
-
-
-/* Intersection Observer Object: */
-
-/* 1*/
-/* .hidden {
-    opacity: 0;
-    transform: translateY(80px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.hidden-content {
-    opacity: 0;
-    transform: translateX(-100px) scale(1);
-    transition: opacity 1s ease-in, transform 1s ease-in;
-}
-
-.visible-content {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    transition-delay: 0.3s;
-} */
 
 
 /* Antes de que el elemento sea visible */
@@ -1122,6 +1091,30 @@ dialog.closing {
     /* El elemento se mueve a su posición original */
 }
 
+
+
+
+
+/* errors */
+
+
+
+
+
+.error-message {
+    margin: 0;
+    padding: 0;
+    transform: scale(0.8);
+    color: red;
+    font-style: italic;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.error-message.show {
+    opacity: 1;
+}
 
 @keyframes heartbeat {
 

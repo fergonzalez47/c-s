@@ -52,13 +52,17 @@ export function displayServices(services, container) {
 }
 
 
-
 export function inputPhoneNumber() {
-
     document.getElementById('phone').addEventListener('input', function (e) {
-        let value = e.target.value.replace(/\D/g, ''); // delete excess of characters
-        if (value.length > 10) value = value.slice(0, 10); // Máx 10 dígits
+        // Eliminar todos los caracteres que no sean dígitos
+        let value = e.target.value.replace(/\D/g, '');
 
+        // Limitar a un máximo de 10 dígitos
+        if (value.length > 10) {
+            value = value.slice(0, 10); // Mantener solo los primeros 10 dígitos
+        }
+
+        // Formatear el número
         let formattedValue = '';
         if (value.length > 6) {
             formattedValue = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6)}`;
@@ -67,9 +71,10 @@ export function inputPhoneNumber() {
         } else if (value.length > 0) {
             formattedValue = `(${value}`;
         }
+
+        // Asignar el valor formateado de vuelta al input
         e.target.value = formattedValue;
     });
-
 }
 
 
@@ -147,7 +152,7 @@ export function addRequestBtnService(containerList) {
         requestBtn.classList.add("cta-3");
         requestBtn.href = "https://wa.me/13854360911?text=" +
             encodeURIComponent("Hi, I am interested in requesting an estimate for cleaning services. Could you please provide more details about... ?");
-        
+
         requestBtn.target = "_blank";
         requestBtn.rel = "noopener noreferrer";
 

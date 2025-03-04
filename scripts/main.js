@@ -1,8 +1,9 @@
 
 import { apiFetch, displayServices, inputPhoneNumber, displayIconsServices, addRequestBtnService } from "./utils.js";
-import { displayInf } from "./thanks.js";
 import { renderServices } from "./services.js";
 import { initIntersectionObserver } from "./ioo.js";
+
+import { validateContactForm } from './contact-form.js';
 
 const servicesPath = "scripts/features.json";
 
@@ -24,13 +25,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 
 
-    
+
     if (document.getElementById("phone")) {
         inputPhoneNumber();
-    }
-
-    if (document.getElementById("received-inf")) {
-        displayInf();
     }
 
     const timestampInput = document.getElementById("timestamp");
@@ -50,5 +47,27 @@ window.addEventListener("DOMContentLoaded", async () => {
         addRequestBtnService(ServiceContainerInfoList);
     }
 
+
+
+
     initIntersectionObserver();
 });
+
+
+
+// form
+
+const form = document.querySelector(".form");
+
+if (form) {
+    const submitBtn = document.getElementById("customSubmit");
+    submitBtn.addEventListener("click", () => {
+        let response = validateContactForm();
+
+        if (response) {
+            form.submit();
+            
+        }
+    })
+}
+

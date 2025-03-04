@@ -34,22 +34,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="icon" href="../public/favicon/favicon.ico">
     <script type="module" src="../scripts/main.js"></script>
+
 </head>
 
 <body>
     <nav class="navbar">
         <!-- Checkbox for toggling menu -->
         <input type="checkbox" id="check">
-    
+
         <!-- Menu icon -->
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-    
+
         <!-- Site logo -->
         <label class="logo"><a href="../index.html"><img id="logo" src="../public/images/cslogo.jpg"
                     alt="business logo">Cleaning Solution</a></label>
-    
+
         <!-- Navigation links -->
         <ul>
             <li><a href="../">Home</a></li>
@@ -87,72 +88,73 @@
 
         <section class="section-form">
 
-            <form class="form" action="processform.php" method="POST">
+            <form class="form" action="../processform.php" method="POST">
                 <h2>Your information</h2>
+
                 <!-- First Name -->
-                <label>
+                <label id="firstName-label">
                     First Name
                     <input type="text" id="firstName" name="firstName" required autocomplete="given-name"
                         title="Please enter your first name" placeholder="Emily">
+                    <p class="error-message">Please enter a valid first name</p>
                 </label>
-
                 <br>
 
                 <!-- Last Name -->
-                <label>
+                <label id="lastName-label">
                     Last Name
                     <input type="text" id="lastName" name="lastName" required autocomplete="family-name"
                         title="Please enter your last name" placeholder="Johnson">
+                    <p class="error-message">Please enter a valid last name</p>
                 </label>
-
                 <br>
 
                 <!-- Email Address -->
-                <label>
+                <label id="email-label">
                     Email Address
                     <input type="email" id="email" name="email" required autocomplete="email"
                         placeholder="example@domain.com" title="Please enter a valid email address">
+                    <p class="error-message">Please enter a valid email address</p>
                 </label>
-
                 <br>
 
                 <!-- Mobile Phone Number -->
-                <label>
+                <label id="phone-label">
                     Mobile Phone Number
                     <input type="tel" id="phone" name="phone" required autocomplete="tel"
-                        pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$"
-                        title="Enter a valid US phone number (e.g., 123-456-7890 or (123) 456-7890)"
-                        placeholder="123 456 7890">
+                        pattern="^\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{4}$"
+                        title="Enter a valid US phone number (e.g., (123) 456-7890 or 123-456-7890)"
+                        placeholder="(123) 456-7890">
+                    <p class="error-message">Please enter a valid phone number (format: (123) 456-7890)</p>
                 </label>
-
                 <br>
 
+
                 <!-- Business/Organization Name -->
-                <label>
+                <label id="businessName-label">
                     Business/Organization's Name <i>(If applicable)</i>
                     <input type="text" id="businessName" name="businessName" autocomplete="organization"
                         title="Please enter your business/organization's name">
                 </label>
-
-
                 <br>
 
-                <!--  Description of service -->
-                <label>
+                <!-- Description of service -->
+                <label id="description-label">
                     Description of service
-                    <textarea placeholder="Please provide a brief description about tke kind of service you need."
+                    <textarea required
+                        placeholder="Please provide a brief description about the kind of service you need."
                         id="description" name="description"
-                        title="Please provide a brief description about tke kind of service you need."></textarea>
+                        title="Please provide a brief description about the kind of service you need."></textarea>
+                    <p class="error-message">Please provide a valid description (min. 10 characters)</p>
                 </label>
-
                 <br>
 
-                <!-- Timestamp (Hidden Field) -->
-                <input type="hidden" id="timestamp" name="timestamp" />
                 <!-- Submit Button -->
-                <input class="button-5" type="submit" value="Contact Us">
-
+                <!-- <input class="button-5" type="submit" value="Contact Us"> -->
+                <button id="customSubmit" class="button-5">Contact Us</button>
             </form>
+
+
 
 
 
@@ -191,20 +193,15 @@
                             Chat with Us on WhatsApp
                         </a>
                     </div>
-                    <div class="mapouter">
+                    <!-- <div class="mapouter">
                         <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" scrolling="no"
                                 src="https://maps.google.com/maps?width=625&amp;height=170&amp;hl=en&amp;q=utah&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
                                 href="https://sprunkin.com/">Utah</a></div>
 
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
-
-
-
-
-
         </section>
 
         <div class="Whatsapp-floating-chat">
@@ -240,9 +237,9 @@
                 <li><a href="../services/">Services</a></li>
                 <li><a href="../contact/">Contact</a></li>
             </ul>
-    
+
         </div>
-    
+
         <div class="footer-socialmedia">
             <ul>
                 <li>
@@ -262,7 +259,7 @@
                 </li>
             </ul>
         </div>
-    
+
         <div class="footer-inf">
             <h4>Cleaning Solution</h4>
             <p>Utah, USA</p>
@@ -275,13 +272,14 @@
                 <li><a href="../privacyp/">Privacy Policy</a></li>
             </ul>
         </div>
-    
+
         <div class="footer-dev">
             <!-- <p>Fernando Gonzalez</p> -->
             <p>©<span id="currentYear"> 2025</span> Cleaning Solution</p>
-            <a class="developer" target="_blank" href="https://www.linkedin.com/in/fergonzalez-valdez/">fergonzalez47</a>
+            <a class="developer" target="_blank"
+                href="https://www.linkedin.com/in/fergonzalez-valdez/">fergonzalez47</a>
         </div>
-    
+
     </footer>
 </body>
 
