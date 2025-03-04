@@ -1,11 +1,14 @@
 
 
 export function showError(fieldId) {
+    const input = document.querySelector(`${fieldId} input`);
     const errorParagraph = document.querySelector(`${fieldId} .error-message`);
+    input.classList.add("error");
     errorParagraph.classList.add("show");
 
     // Ocultar después de 5 segundos
     setTimeout(() => {
+        input.classList.remove("error");
         errorParagraph.classList.remove("show");
     }, 5000);
 }
