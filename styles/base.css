@@ -541,7 +541,7 @@ footer .footer-socialmedia ul {
 
 
 .form {
-    background-color: #aea6d118;
+    background-color: rgb(252, 250, 240);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
     width: 100%;
@@ -552,14 +552,13 @@ footer .footer-socialmedia ul {
 .form label {
     display: grid;
     color: var(--color-primary);
-    margin-bottom: .125rem;
+    /* margin-bottom: .125rem; */
 
 }
 
 .form label input {
     box-sizing: border-box;
-    margin-left: .25rem;
-    margin-top: .25rem;
+    margin-top: .125rem;
     border: 1px solid var(--color-gray);
     outline: none;
     width: 100%;
@@ -592,8 +591,18 @@ footer .footer-socialmedia ul {
 .form h2 {
     text-align: center;
     font-size: clamp(1.7rem, 3vw, 2.4rem);
+    display: block;
 
 
+
+}
+
+.form-description {
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: .5rem;
+    margin-bottom: .75rem;
 }
 
 .form label i {
@@ -653,6 +662,7 @@ footer .footer-socialmedia ul {
 
 .section-form {
     display: grid;
+    column-gap: 2rem;
     row-gap: 1rem;
     padding-top: 4rem;
 }
@@ -663,6 +673,7 @@ footer .footer-socialmedia ul {
     display: grid;
     border-radius: 10px;
     gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -671,22 +682,20 @@ footer .footer-socialmedia ul {
 
 
 .mapouter {
-    text-align: right;
+    text-align: center;
     width: 100%;
     height: 170px;
 }
 
-.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    width: 100%;
-    height: 170px;
+.mapouter h3 {
+    margin: 1rem auto;
 }
 
-.gmap_iframe {
-    height: 170px !important;
+iframe {
+    max-width: 600px;
+    max-height: 400px;
+    width: 80%;
 }
-
 
 
 
@@ -1118,7 +1127,7 @@ dialog.closing {
 
 
 .form label input.error {
-  background-color: rgb(252, 230, 230);
+    background-color: rgb(252, 230, 230);
 
 }
 
